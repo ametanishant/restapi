@@ -12,4 +12,4 @@ RUN cd /build/restapi && go build && ./restapi
 
 EXPOSE 8080
 
-ENTRYPOINT ["/build/restapi/main/main"]
+ENTRYPOINT ["/build/restapi/main]
