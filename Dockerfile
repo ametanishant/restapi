@@ -8,8 +8,8 @@ RUN go install github.com/ametanishant/restapi@latest
 
 RUN cd /build && git clone https://github.com/ametanishant/restapi.git
 
-RUN cd /build/restapi && go build && ./restapi
+RUN cd /build/restapi && go build 
 
-EXPOSE 8080
+EXPOSE 8000
 
-ENTRYPOINT ["/build/restapi/main]
+ENTRYPOINT ["/build/restapi/main"]
