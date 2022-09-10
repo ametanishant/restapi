@@ -12,4 +12,4 @@ RUN cd /build/restapi && go build
 
 EXPOSE 8000
 
-ENTRYPOINT ["/build/restapi/main.go"]
+ENTRYPOINT ["/build/restapi"]
