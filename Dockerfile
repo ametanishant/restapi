@@ -4,7 +4,7 @@ RUN mkdir /build
 WORKDIR /build
 
 RUN export GO111MODULE=on
-RUN go install github.com:ametanishant/restapi
+RUN go install github.com/ametanishant/restapi
 RUN go install github.com/gorilla/mux
 RUN cd /build && git clone github.com:ametanishant/restapi.git
 
