@@ -8,7 +8,7 @@ RUN go get github.com:ametanishant/restapi
 RUN go get github.com/gorilla/mux
 RUN cd /build && git clone github.com:ametanishant/restapi.git
 
-RUN cd /build/restapi/main && go build
+RUN cd /build/restapi && go build && ./restapi
 
 EXPOSE 8080
 
