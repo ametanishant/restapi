@@ -10,7 +10,7 @@ RUN cd /build && git clone https://github.com/ametanishant/restapi.git
 
 RUN cd /build/restapi && go build 
 
-RUN chmod 777 /build/restapi
+RUN chmod 777 ./build/restapi
 
 EXPOSE 8000
 
