@@ -10,8 +10,8 @@ RUN cd /build && git clone https://github.com/ametanishant/restapi.git
 
 RUN cd /build/restapi && go build 
 
-RUN chmod -R 755 /build/restapi/main.go
+RUN chmod -R 755 /build/restapi
 
 EXPOSE 8000
 
-ENTRYPOINT ["/build/restapi/main.go"]
+ENTRYPOINT ["/build/restapi"]
