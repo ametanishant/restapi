@@ -14,4 +14,4 @@ RUN chmod +x /build/restapi
 
 EXPOSE 8000
 
-ENTRYPOINT ["build/restapi"]
+ENTRYPOINT ["/build/restapi/restapi"]
