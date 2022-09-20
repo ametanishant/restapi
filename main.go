@@ -24,8 +24,8 @@ type Book struct {
 
 //Get All Books
 func getBooks(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusInternalServerError)
-	time.Sleep(10 * time.Second)
+	time.Sleep(20 * time.Second)
+	w.WriteHeader(http.StatusCreated)
 	w.Write([]byte("500 - Something bad happenedd!"))
 
 }
