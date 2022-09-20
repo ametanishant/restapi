@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/gorilla/mux"
 )
@@ -24,6 +25,7 @@ type Book struct {
 //Get All Books
 func getBooks(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusInternalServerError)
+	time.Sleep(10 * time.Second)
 	w.Write([]byte("500 - Something bad happenedd!"))
 
 }
@@ -48,6 +50,11 @@ func deleteBook(w http.ResponseWriter, r *http.Request) {
 
 }
 
+//Dealy Method
+func delayMethod(w http.ResponseWriter, r *http.Request) {
+
+}
+
 func main() {
 	//Init Router
 	r := mux.NewRouter()
@@ -58,6 +65,7 @@ func main() {
 	r.HandleFunc("/api/books", createBook).Methods("POST")
 	r.HandleFunc("/api/books/{id]", updateBook).Methods("PUT")
 	r.HandleFunc("/api/books/{id]", deleteBook).Methods("DELETE")
+	r.HandleFunc("/api/delay", delayMethod).Methods("GET")
 
 	log.Fatal(http.ListenAndServe(":8000", r))
 
